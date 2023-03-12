@@ -1,0 +1,6 @@
+export { App } from './App'
+export { InputForm } from './InputForm'
+export { Card } from './Card'
+export { Footer } from './Footer'
+export { Header } from './Header'
+export { TreeComponent } from './Gragh/Tree'

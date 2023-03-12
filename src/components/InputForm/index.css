@@ -1,0 +1,12 @@
+.input-control {
+   width: 100%;
+}
+.input {
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: rgb(254,242,206);
+    width: 100%;
+    height: 56px;
+    font-size: 28px;
+    font-weight: 500;
+}
