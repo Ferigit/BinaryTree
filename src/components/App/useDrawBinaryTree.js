@@ -12,17 +12,24 @@ function useDrawBinaryTree() {
     }, [tree])
 
     const handleInputOnChange = (newVal) => {
-        const NewTree = new TreeComponent()
-        const splitArray = newVal?.split(" ").filter(item => !!item);
-        const tmpTree = NewTree.insertLevelOrder(splitArray, 0);
-        setTree(tmpTree)
-        setInputValue(newVal);
+        if (!!newVal) {
+            setTree(null);
+            const NewTree = new TreeComponent()
+            const splitArray = newVal?.split(" ").filter(item => !!item);
+            const tmpTree = NewTree.insertLevelOrder(splitArray, 0);
+            setTree(tmpTree)
+            setInputValue(newVal);
+        } else {
+            setTree(null)
+            setInputValue(newVal);
+        }
     };
 
     const canv = document.getElementById("treeCanvas");
     const ctx = canv ? canv.getContext("2d") : null;
 
     const bfs = () => {
+        ctx.clearRect(0, 0, 1000, 900);
         const queue = [];
         const black = "#000"
 
