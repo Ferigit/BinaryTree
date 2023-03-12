@@ -1,0 +1,17 @@
+.container {
+  padding: 16px;
+  display: block;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+#treeCanvas {
+  width:1000px;
+  height:900px;
+}
+@media (max-width: 600px) {
+  #treeCanvas {
+      width:90%;
+      height:auto;
+  }
+}
